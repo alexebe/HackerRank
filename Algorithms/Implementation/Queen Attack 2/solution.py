@@ -9,6 +9,24 @@ import sys
 # Complete the queensAttack function below.
 def queensAttack(n, k, r_q, c_q, obstacles):
     #Closest obstacles on each direction
+	
+	#Obstacles are initialized with the point found out of the grid
+	#when following each direction, so that it in fine, there is no obstacle 
+    #on a given direction, the entire line is taken into account	
+	 '''
+                 1  2  3  4
+                _x______x____x
+            4   |o  o  o  o
+                ------------
+            3 x |o  o  Q  o  x
+                ------------
+            2   |o  o  o  o
+                -------------
+            1   |o  o  o  o  x
+              x         x
+			  
+			  x : obstacles 
+	'''
     cObsLeft = [r_q, 0]
     cObsRight = [r_q, n + 1]
     cObsBottom = [0, c_q]
